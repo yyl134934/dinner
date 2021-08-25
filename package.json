@@ -1,9 +1,9 @@
 {
-  "name": "nextjs-ts-antd-redux-storybook-jest-starter",
+  "name": "for-dinner",
   "version": "1.0.0",
   "description": "Next.js + TypeScript Project Starter",
-  "title": "Next.js Project Template",
-  "author": "JackySummer",
+  "title": "For Dinner",
+  "author": "junger",
   "keywords": [
     "react",
     "nextjs",
@@ -43,7 +43,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint --config .commitlintrc.js -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged && yarn tsc",
+      "pre-commit": "lint-staged && yarn tsc"
 
     }
   },

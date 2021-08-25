@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "paths": {
       "src/*": ["src/*"],
-      "server/*": ["server/*"]
+      "server/*": ["server/*"],
+      "lib/*": ["lib/*"]
     },
     "target": "es5",
     "module": "esnext",

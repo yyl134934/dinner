@@ -33,7 +33,27 @@ export const getUser = async (info: UserGlobal.User) => {
 
   const { user_name: userName, password } = info;
 
-  const user = (await collection).findOne<UserGlobal.User>({ user_name: userName, password });
+  const user = (await collection).findOne<UserGlobal.User>({ user_name: userName, password }, { password: 0 });
 
   return user;
+};
+
+export const getMenu = async () => {
+  const client = await MongoClient.connect(URI);
+  const db = await client.db(DB_NAME);
+  const collection = await db.collection(COLLECTION_NAME_MENU);
+
+  const user = (await collection).find().toArray<MenuGlobal.Menu>();
+
+  return user;
+};
+
+export const getDishInfo = async () => {
+  const client = await MongoClient.connect(URI);
+  const db = await client.db(DB_NAME);
+  const collection = await db.collection(COLLECTION_NAME_DISH_INFO);
+
+  const dishInfo = (await collection).find({}, { _id: 0 }).toArray<MenuGlobal.Dish>();
+
+  return dishInfo;
 };

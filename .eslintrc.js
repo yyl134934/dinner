@@ -116,7 +116,7 @@ module.exports = {
     'no-continue': OFF,
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
-    // properties: OFF,
-    // ignoreDestructuring: true,
+    properties: OFF,
+    ignoreDestructuring: true,
   },
 };

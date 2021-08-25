@@ -7,10 +7,10 @@ import 'src/i18n';
 import 'antd/dist/antd.css';
 
 const WrappedApp: FC<AppProps> = ({ Component, pageProps }) => (
-  <Layout>
+  <>
     <GlobalBaseStyle />
     <Component {...pageProps} />
-  </Layout>
+  </>
 );
 
 export default wrapper.withRedux(WrappedApp);
